@@ -1,0 +1,32 @@
+---
+alg: lstm_ed
+base_dir: log/lstm_ed/actual_data
+log_level: INFO
+gpu: 0
+data:
+  batch_size: 200
+  dataset: data/temp_electric_holiday_increase.csv
+  eval_batch_size: 1
+  test_batch_size: 1
+  test_size: 0.2
+  valid_size: 0.2
+model:
+  model_type: ed
+  seq_len: 63
+  horizon: 7
+  input_dim: 4
+  verified_percentage: 1
+  l1_decay: 0
+  nodes: 1
+  output_dim: 1
+  rnn_units: 200
+  rnn_layers: 2
+  data_type: power_month_holiday_increase
+train:
+  dropout: 0
+  epochs: 300
+  optimizer: adam
+  patience: 30
+  continue_train: False
+test:
+  run_times: 1
