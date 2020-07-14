@@ -4,8 +4,8 @@ base_dir: log/lstm_ed/actual_data
 log_level: INFO
 gpu: 0
 data:
-  batch_size: 200
-  dataset: data/temp_electric_holiday_increase.csv
+  batch_size: 300
+  dataset: data/holiday_increase_month_dow_doy.csv
   eval_batch_size: 1
   test_batch_size: 1
   test_size: 0.2
